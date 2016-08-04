@@ -9,11 +9,11 @@ import com.amazonaws.services.s3.AmazonS3Client;
 /**
  * Created by Mariusz.Pawlowski on 2016-08-03.
  */
-public class TiktalikConnection {
+public class TiktalikFilesConnection {
 
     private AmazonS3 connection;
 
-    public TiktalikConnection(String login, String key) {
+    public TiktalikFilesConnection(String login, String key) {
         AWSCredentials credentials = new BasicAWSCredentials(login, key);
         ClientConfiguration clientConfig = new ClientConfiguration();
         connection = new AmazonS3Client(credentials, clientConfig);

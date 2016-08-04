@@ -14,7 +14,7 @@ public class TiktalikTest {
         String login = "";
         String key = "";
 
-        TiktalikConnection tiktalikConnection = new TiktalikConnection(login, key);
+        TiktalikFilesConnection tiktalikConnection = new TiktalikFilesConnection(login, key);
         AmazonS3 connection = tiktalikConnection.getConnection();
     }
 }
