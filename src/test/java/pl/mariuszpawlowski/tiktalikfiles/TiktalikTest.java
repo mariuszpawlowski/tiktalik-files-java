@@ -1,5 +1,6 @@
 package pl.mariuszpawlowski.tiktalikfiles;
 
+import com.amazonaws.services.s3.AmazonS3;
 import org.junit.Test;
 
 /**
@@ -13,8 +14,7 @@ public class TiktalikTest {
         String login = "";
         String key = "";
 
-        Tiktalik tiktalik = new Tiktalik();
-        tiktalik.getConnection(login, key);
-
+        TiktalikConnection tiktalikConnection = new TiktalikConnection(login, key);
+        AmazonS3 connection = tiktalikConnection.getConnection();
     }
 }
